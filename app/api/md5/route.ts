@@ -17,7 +17,13 @@ export async function POST(request: Request) {
 
   const hash = MD5.hash(text);
 
-  return Response.json({
-    hash,
-  });
+  return Response.json(
+    {
+      hash,
+    },
+    {
+      status: 200,
+      statusText: "OK",
+    }
+  );
 }
